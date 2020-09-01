@@ -9,10 +9,10 @@
   },
   "author": "Mayra Rodriguez",
   "license": "MIT",
-  "devDependencies": {
-    "markdown-link-check": "^3.8.1"
-  },
+  "devDependencies": {},
   "dependencies": {
+    "fs": "0.0.1-security",
+    "marked": "^1.1.1",
     "minimist": "^1.2.5"
   }
 }
