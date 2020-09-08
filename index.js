@@ -8,5 +8,5 @@ console.log(validate);
 
 validation
   .init(filePath, {validate})
-  .then(res => console.log(res))
+  .then(res => console.log(JSON.stringify(res)))
   .catch(err => console.log(err));
