@@ -4,12 +4,14 @@
   "description": "md-links project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "node index.js"
   },
   "author": "Mayra Rodriguez",
   "license": "MIT",
-  "devDependencies": {},
+  "devDependencies": {
+    "jest": "^26.4.2"
+  },
   "dependencies": {
     "fs": "0.0.1-security",
     "marked": "^1.1.1",
