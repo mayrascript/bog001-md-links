@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "start": "node index.js"
+    "start": "node index.js",
+    "start:example": "node index.js README.md --validate=true"
   },
   "author": "Mayra Rodriguez",
   "license": "MIT",

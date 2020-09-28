@@ -3,7 +3,6 @@ const pathExt = require('path');
 const marked = require('marked');
 const urlExists = require('url-exists');
 
-
 const init = (path, options = { validate: false}) => {
   return new Promise((resolve, reject) => {
 
@@ -52,5 +51,6 @@ const init = (path, options = { validate: false}) => {
 
   });
 };
+
 
 exports.init = init;
