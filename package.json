@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
+    "test:coverage": "jest --collect-coverage",
     "start": "node index.js",
     "start:example": "node index.js README.md --validate=true"
   },
