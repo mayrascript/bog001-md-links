@@ -1,12 +1,25 @@
-const validation = require('./validation');
-const argv = require('minimist')(process.argv.slice(2));;
+const validation = require('./app/app');
+const argv = require('minimist')(process.argv.slice(2));
 
-const filePath = argv._[0];
-const validate = argv.validate || false;
-console.log('filePath', filePath);
-console.log(validate);
+function getFilePath(argv) {
+  return argv._[0];
+}
 
-validation
-  .init(filePath, {validate})
-  .then(res => console.log(JSON.stringify(res)))
-  .catch(err => console.log(err));
+function getValidateTag(argv) {
+  return !!argv.validate || false;
+}
+
+function main(argv) {
+  const filePath = getFilePath(argv);
+  const validateTag = getValidateTag(argv);
+
+  return validation
+    .init(filePath, {validate: validateTag})
+    .then(res => console.log(JSON.stringify(res)))
+    .catch(err => console.log(err));
+}
+
+main(argv);
+
+
+module.exports = { getFilePath, getValidateTag, main}
